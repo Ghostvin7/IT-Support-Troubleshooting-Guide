@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Starte automatische Fehlerbehebung..."
+
+# Netzwerkprobleme lösen
+echo "Setze Netzwerk zurück..."
+systemctl restart NetworkManager
+
+# Berechtigungen korrigieren
+echo "Setze Dateiberechtigungen zurück..."
+chmod -R 755 /home/user/
+
+# Paket-Manager aktualisieren und defekte Pakete reparieren
+echo "Aktualisiere Paketmanager und repariere defekte Pakete..."
+sudo apt update && sudo apt --fix-broken install -y
+
+echo "Fehlerbehebung abgeschlossen!"

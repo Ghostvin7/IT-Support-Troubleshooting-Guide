@@ -1,0 +1,18 @@
+Write-Host "Starte automatische Fehlerbehebung..."
+
+# Netzwerkprobleme beheben
+Write-Host "Setze Netzwerk zurück..."
+ipconfig /flushdns
+netsh int ip reset
+netsh winsock reset
+
+# Temporäre Dateien löschen
+Write-Host "Lösche temporäre Dateien..."
+Remove-Item -Path "C:\Windows\Temp\*" -Force -Recurse
+Remove-Item -Path "$env:TEMP\*" -Force -Recurse
+
+# Systemdateien prüfen und reparieren
+Write-Host "Überprüfe Systemdateien..."
+sfc /scannow
+
+Write-Host "Fehlerbehebung abgeschlossen!"

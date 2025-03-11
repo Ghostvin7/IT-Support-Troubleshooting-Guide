@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Letzte 10 Systemfehler:"
+journalctl -p 3 -n 10

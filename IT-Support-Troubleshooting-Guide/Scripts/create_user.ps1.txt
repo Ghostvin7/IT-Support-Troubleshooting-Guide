@@ -1,0 +1,6 @@
+Write-Host "Erstelle neuen Benutzer..."
+$Username = "neuerUser"
+$Password = ConvertTo-SecureString "Passwort123!" -AsPlainText -Force
+New-LocalUser -Name $Username -Password $Password -FullName "Neuer Benutzer" -Description "Testbenutzer"
+Add-LocalGroupMember -Group "Benutzer" -Member $Username
+Write-Host "Benutzer $Username wurde erstellt und zur Gruppe 'Benutzer' hinzugefügt."

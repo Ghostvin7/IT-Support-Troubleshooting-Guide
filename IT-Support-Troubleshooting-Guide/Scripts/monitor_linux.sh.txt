@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Systemüberwachung gestartet..."
+
+echo "CPU-Auslastung:"
+top -bn1 | grep "Cpu(s)"
+
+echo "Arbeitsspeicher-Nutzung:"
+free -h
+
+echo "Top 10 Prozesse nach CPU-Auslastung:"
+ps aux --sort=-%cpu | head -10

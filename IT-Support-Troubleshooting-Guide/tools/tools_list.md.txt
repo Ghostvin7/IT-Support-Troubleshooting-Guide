@@ -1,0 +1,6 @@
+# Nützliche Open-Source IT-Tools
+
+- **Wireshark** → Netzwerkverkehr analysieren  
+- **Process Explorer** → Erweiterter Taskmanager für Windows  
+- **Fail2Ban** → Schutz vor Brute-Force-Angriffen auf Linux-Server  
+- **Chkrootkit** → Rootkit-Scanner für Linux  

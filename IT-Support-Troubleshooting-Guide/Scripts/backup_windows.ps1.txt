@@ -1,0 +1,4 @@
+$Source = "C:\Benutzer\Dokumente"
+$Backup = "E:\Backup\Dokumente_$(Get-Date -Format yyyy-MM-dd).zip"
+Compress-Archive -Path $Source -DestinationPath $Backup -Force
+Write-Host "Backup erfolgreich gespeichert unter: $Backup"

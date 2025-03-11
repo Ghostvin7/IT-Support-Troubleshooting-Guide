@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Überprüfe Netzwerkverbindung..."
+ip a | grep 'inet '
+
+echo "Teste Internetzugriff mit Ping..."
+ping -c 4 8.8.8.8

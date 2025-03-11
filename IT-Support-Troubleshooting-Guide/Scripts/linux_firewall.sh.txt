@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Aktiviere UFW Firewall..."
+sudo ufw enable
+
+echo "Erlaube SSH-Verbindungen..."
+sudo ufw allow OpenSSH
+
+echo "Blockiere alle anderen eingehenden Verbindungen..."
+sudo ufw default deny incoming
+
+echo "Aktuelle Firewall-Regeln:"
+sudo ufw status verbose

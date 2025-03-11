@@ -1,0 +1,6 @@
+Write-Host "Überprüfe Netzwerkverbindung..."
+$ipconfig = ipconfig | Out-String
+Write-Host "IP-Konfiguration:" $ipconfig
+
+$ping = Test-Connection -ComputerName 8.8.8.8 -Count 4
+Write-Host "Ping-Ergebnis:" $ping

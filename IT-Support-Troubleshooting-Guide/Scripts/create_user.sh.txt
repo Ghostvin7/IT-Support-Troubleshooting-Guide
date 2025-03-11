@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Erstelle neuen Benutzer..."
+USERNAME="neuerUser"
+PASSWORD="Passwort123"
+useradd -m -s /bin/bash $USERNAME
+echo "$USERNAME:$PASSWORD" | chpasswd
+usermod -aG sudo $USERNAME
+echo "Benutzer $USERNAME wurde erstellt und der sudo-Gruppe hinzugefügt."

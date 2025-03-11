@@ -1,0 +1,10 @@
+Write-Host "Systemüberwachung gestartet..."
+
+Write-Host "Top 10 Prozesse nach CPU-Auslastung:"
+Get-Process | Sort-Object -Property CPU -Descending | Select-Object -First 10
+
+Write-Host "CPU-Auslastung:"
+Get-Counter '\Processor(_Total)\% Processor Time' -Continuous
+
+Write-Host "Freier Arbeitsspeicher:"
+Get-Counter '\Memory\Available MBytes'

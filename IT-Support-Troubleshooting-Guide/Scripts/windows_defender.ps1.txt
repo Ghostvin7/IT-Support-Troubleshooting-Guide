@@ -1,0 +1,8 @@
+Write-Host "Aktiviere Windows Defender..."
+Set-MpPreference -DisableRealtimeMonitoring $false
+
+Write-Host "Update der Virensignaturen..."
+Update-MpSignature
+
+Write-Host "Starte vollständigen Systemscan..."
+Start-MpScan -ScanType FullScan
